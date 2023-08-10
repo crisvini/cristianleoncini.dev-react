@@ -6,10 +6,10 @@ import { Outlet } from 'react-router-dom'
 
 import Navbar from './components/Navbar'
 
-function App({ idioma }) {
+function App() {
   return (
     <>
-      <Navbar idioma={idioma} />
+      <Navbar />
       <Outlet />
     </>
   )
