@@ -50,7 +50,7 @@ const ContatoPage = () => {
                                 </a>
                             </div>
                         </div>
-                        <div className="row mt-3">
+                        {/* <div className="row mt-3">
                             <div className="col-12">
                                 <a href="https://www.cristianleoncini.dev/curriculum/Curr%C3%ADculo%20Cristian.pdf" download target="_blank" className="no-link">
                                     <span className="fs-1 texto-principal texto-navbar-hover">
@@ -58,7 +58,7 @@ const ContatoPage = () => {
                                     </span>
                                 </a>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </section>
