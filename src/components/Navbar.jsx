@@ -1,6 +1,9 @@
 import { Link, NavLink } from "react-router-dom"
 
-const Navbar = () => {
+const Navbar = ({ idioma }) => {
+    if (idioma === 'ptBR') var contato = { "link": "/contato", "nome": "Contato" }
+    else var contato = { "link": "/contact", "nome": "Contact" }
+
     return (
         <header className='sticky-top'>
             <nav className="navbar navbar-expand-lg navbar-dark bg-primary-custom container-xxl mb-3 mb-lg-5">
@@ -21,7 +24,7 @@ const Navbar = () => {
                                         <NavLink to='/'>Home</NavLink>
                                     </li>
                                     <li className="nav-item me-3">
-                                        <NavLink to='/contato'>Contato</NavLink>
+                                        <NavLink to={contato.link}>{contato.nome}</NavLink>
                                     </li>
                                 </ul>
                             </div>

@@ -9,19 +9,26 @@ import ErrorPage from './routes/ErrorPage.jsx'
 import HomePage from './routes/HomePage.jsx'
 import ContatoPage from './routes/ContatoPage.jsx'
 
+const idioma = 'enUS'
+// const idioma = 'ptBR'
+
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: <App idioma={idioma} />,
     errorElement: <ErrorPage />,
     children: [
       {
         path: '/',
-        element: <HomePage />
+        element: <HomePage idioma={idioma} />
       },
       {
         path: '/contato',
-        element: <ContatoPage />
+        element: <ContatoPage idioma={idioma} />
+      },
+      {
+        path: '/contact',
+        element: <ContatoPage idioma={idioma} />
       }
     ]
   }
