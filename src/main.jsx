@@ -37,6 +37,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <IdiomaContextProvider>
     <React.StrictMode>
       <RouterProvider router={router} />
-    </React.StrictMode>,
+    </React.StrictMode>
   </IdiomaContextProvider>
 )
