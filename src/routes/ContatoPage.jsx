@@ -1,6 +1,11 @@
 import ContatoJson from '../json/ContatoJson'
 
-const ContatoPage = ({ idioma }) => {
+import { useContext } from 'react'
+import { IdiomaContext } from '../context/IdiomaContext'
+
+const ContatoPage = () => {
+    const { idioma } = useContext(IdiomaContext)
+
     if (idioma === 'ptBR') var json = ContatoJson.ptBR
     else var json = ContatoJson.enUS
 

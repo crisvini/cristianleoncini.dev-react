@@ -9,34 +9,34 @@ import ErrorPage from './routes/ErrorPage.jsx'
 import HomePage from './routes/HomePage.jsx'
 import ContatoPage from './routes/ContatoPage.jsx'
 
-const idioma = 'enUS'
-// const idioma = 'ptBR'
+import { IdiomaContextProvider } from './context/IdiomaContext'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App idioma={idioma} />,
+    element: <App />,
     errorElement: <ErrorPage />,
     children: [
       {
         path: '/',
-        element: <HomePage idioma={idioma} />
+        element: <HomePage />
       },
       {
         path: '/contato',
-        element: <ContatoPage idioma={idioma} />
+        element: <ContatoPage />
       },
       {
         path: '/contact',
-        element: <ContatoPage idioma={idioma} />
+        element: <ContatoPage />
       }
     ]
   }
 ])
 
-
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>,
+  <IdiomaContextProvider>
+    <React.StrictMode>
+      <RouterProvider router={router} />
+    </React.StrictMode>,
+  </IdiomaContextProvider>
 )

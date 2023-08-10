@@ -1,8 +1,17 @@
 import { Link, NavLink } from "react-router-dom"
 
-const Navbar = ({ idioma }) => {
+import { useContext } from 'react'
+import { IdiomaContext } from '../context/IdiomaContext'
+
+const Navbar = () => {
+    const { idioma, setIdioma } = useContext(IdiomaContext)
+
     if (idioma === 'ptBR') var contato = { "link": "/contato", "nome": "Contato" }
     else var contato = { "link": "/contact", "nome": "Contact" }
+
+    const handleIdioma = (e) => {
+        setIdioma(e.target.value)
+    }
 
     return (
         <header className='sticky-top'>
@@ -27,6 +36,13 @@ const Navbar = ({ idioma }) => {
                                         <NavLink to={contato.link}>{contato.nome}</NavLink>
                                     </li>
                                 </ul>
+                                <div className="d-flex justify-content-start align-items-start">
+                                    <i className="bi bi-translate me-md-2 ms-2 ms-md-0 fs-5 order-1 order-md-0"></i>
+                                    <select className="form-select form-select-sm order-0 order-md-1 w-6_5" onChange={handleIdioma} >
+                                        <option value="enUS">en-US</option>
+                                        <option value="ptBR">pt-BR</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                     </div>
