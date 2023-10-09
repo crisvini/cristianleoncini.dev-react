@@ -13,20 +13,22 @@ import { IdiomaContextProvider } from './context/IdiomaContext'
 
 const router = createBrowserRouter([
   {
-    path: '/cristianleoncini.dev-react',
+    path: '/',
+    // path: '/cristianleoncini.dev-react',
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
       {
-        path: '/cristianleoncini.dev-react',
+        path: '/',
+        // path: '/cristianleoncini.dev-react',
         element: <HomePage />
       },
       {
-        path: '/cristianleoncini.dev-react/contato',
+        path: '/contato',
         element: <ContatoPage />
       },
       {
-        path: '/cristianleoncini.dev-react/contact',
+        path: '/contact',
         element: <ContatoPage />
       }
     ]
