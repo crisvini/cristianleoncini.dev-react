@@ -22,11 +22,11 @@ const router = createBrowserRouter([
         element: <HomePage />
       },
       {
-        path: '/contato',
+        path: '/cristianleoncini.dev-react/contato',
         element: <ContatoPage />
       },
       {
-        path: '/contact',
+        path: '/cristianleoncini.dev-react/contact',
         element: <ContatoPage />
       }
     ]
