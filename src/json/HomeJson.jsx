@@ -33,7 +33,7 @@ const json = {
         {
             "titulo": "Who am I?",
             "subtitulo": "About me",
-            "texto": "Hello! My name is Cristian, and I'm a " + idade + " year old technology enthusiast; I graduated from " + <a href="https://www.unaerp.br/cursos/engenharia-de-software" target="_blank">UNAERP</a> + " with a degree in Software Engineering in late 2022. Currently, I work as a full-stack web developer, actively contributing to projects and expanding my skills in this exciting field.",
+            "texto": "Hello! My name is Cristian, and I'm a " + idade + " year old technology enthusiast; I graduated from <a href='https://www.unaerp.br/cursos/engenharia-de-software' target='_blank'>UNAERP</a> with a degree in Software Engineering in late 2022. Currently, I work as a full-stack web developer, actively contributing to projects and expanding my skills in this exciting field.",
             "imagem": ProfileImage,
             "perfil": true
         },
